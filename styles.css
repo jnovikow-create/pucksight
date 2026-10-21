@@ -1,0 +1,53 @@
+:root {
+  --bg: #0B1622;
+  --bg-2: #13233A;
+  --card: #1C3150;
+  --fg: #EAF2F8;
+  --muted: #9FB3C8;
+  --ice: #3FD0FF;
+  --crease: #E23B4E;
+  --line: rgba(234, 242, 248, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  background:
+    radial-gradient(720px 320px at 50% -8%, rgba(63, 208, 255, 0.16), transparent 62%),
+    linear-gradient(180deg, var(--bg) 0%, #081018 100%);
+  background-attachment: fixed;
+  color: var(--fg);
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+a { color: var(--ice); }
+code { font-size: 0.9em; background: rgba(63, 208, 255, 0.12); padding: 1px 6px; border-radius: 6px; }
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 28px 18px calc(48px + env(safe-area-inset-bottom)); }
+
+.hero { text-align: center; padding: 12px 0 8px; }
+.logo { width: 112px; height: 112px; border-radius: 26px; margin-bottom: 14px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45); }
+.logo-sm { width: 64px; height: 64px; border-radius: 16px; display: block; margin: 8px 0 12px; }
+.eyebrow { letter-spacing: 0.18em; text-transform: uppercase; color: var(--ice); font-size: 12px; font-weight: 700; }
+h1 { font-size: 42px; letter-spacing: 0.02em; margin: 6px 0 10px; }
+h2 { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ice); margin: 28px 0 10px; }
+.lede { color: var(--muted); font-size: 19px; max-width: 36em; margin: 0 auto; }
+.tag { color: var(--crease); font-weight: 700; letter-spacing: 0.04em; margin-top: 12px; }
+.meta { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+p, li { font-size: 16px; margin-bottom: 10px; }
+ul, ol { padding-left: 1.2em; margin-bottom: 8px; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.card, .link-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+}
+.link-card { display: flex; flex-direction: column; gap: 4px; text-decoration: none; color: inherit; }
+.card-kicker { color: var(--ice); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; }
+.card-desc, .card p { color: var(--muted); }
+.back { color: var(--muted); text-decoration: none; font-size: 14px; }
+.foot { color: var(--muted); font-size: 14px; margin-top: 28px; }
